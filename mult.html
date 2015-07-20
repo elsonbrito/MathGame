@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Math Game</title>
+    </head>
+    <body>
+    
+    <div class="app1">
+    
+    <img name="soma" src="img/mult.png" alt="" usemap="#opermap" style="width:145px;height:126px;">
+
+<map name="opermap">
+  <area shape="rect" coords="0,0,66,55" alt="Somar" href="som.html" onmouseover="ShowPicsoma('img/som.png')" onmouseout="ShowPicsoma('img/mult.png')" >
+  <area shape="rect" coords="77,0,145,55" alt="Diminuir" href="dimin.html" onmouseover="ShowPicsoma('img/dim.png')" onmouseout="ShowPicsoma('img/mult.png')">
+  <area shape="rect" coords="0,62,67,116" alt="Multiplicar" href="mult.html" onmouseover="ShowPicsoma('img/mult.png')" onmouseout="ShowPicsoma('img/mult.png')">
+  <area shape="rect" coords="142,62,75,116" alt="Dividir" href="div.html" onmouseover="ShowPicsoma('img/div.png')" onmouseout="ShowPicsoma('img/mult.png')">
+</map>
+</div>      
+<div class="certo">
+ <img name="mix" src="img/certo.gif" alt="Mix"  style="width:35px;height:36px;">
+</div>
+<div id="deviceready" class="certo">
+ <p class="certo1" id="ptc">00</p>
+</div>
+<div class="errado">    
+  <img name="mix" src="img/errado.gif" alt="Mix"  style="width:35px;height:36px;">
+</div>   
+<div id="deviceready" class="errado">
+  <p class="errado1" id="pte">00</p>
+</div>  
+  <div class="mix">
+   <a href="mix.html"><img name="mix" src="img/mixs.png" alt="Mix" onmouseover="this.src='img/mix1.png'" onmouseout="this.src='img/mixs.png'" style="width:145px;height:46px;"></a>
+  </div>
+
+
+
+        <div class="app">
+            <h1>Math Game</h1>
+            
+            <div id="deviceready" class="">
+             <p class="parag" id="op1">000</p>
+            </div>
+            
+            <div id="deviceready" class="sinal">
+             <p style="font-style: bold; font-size: 30px"> &times; </p>
+            </div>
+            
+            <div id="deviceready" class="">
+             <p class="parag2" id="op2">000</p>
+            </div>
+            
+            <div id="deviceready" class="">
+             <input id="digit" size="1" style="text-align:right" value="" type="text"/>
+            </div>
+            
+            
+            <br />
+            <input type="submit" value="Novo" onclick="random()"/>
+            
+           <br />
+           <br />
+           
+            
+            <div id="deviceready" class="blink">
+             <h3 id="demo"></h3>
+            </div>           
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+  app.initialize();
+</script>
+        
+<script>
+function ShowPicsoma(sImage){document.soma.src = sImage}		
+</script>
+ <script>
+var msgtop=100 // Set the top position of the div
+var msgleft=190 // Set the left position of the div
+var tborder="0"
+var cspace="0"
+var cpad="0"
+var tabheight=50 // Set the height of table
+var tabwidth=190 // Set the width of table
+var td1height=30
+var td2height=150
+var boxt=""
+
+function Domsg(flag)
+ {
+   hidebox() // Hide the box after clicking on text link in box
+    if(flag=="Yes")
+      {
+        level = level + level;
+        ptc = 0;
+        pte = 0;
+        document.getElementById("ptc").innerHTML = "00";
+        document.getElementById("pte").innerHTML = "00";
+        random();
+      }
+       else {navigator.app.exitApp();}
+ }
+ 
+function DoFormbox(msgtext)
+ {
+   theString="<table width='"+tabwidth+"' height='"+tabheight+"' border="+tborder+" cellspacing="+cspace+" cellpadding="+cpad+"><tr><td height='"+td1height+"' class='td1style' align='left'><b>"
+theString+=""+msgtext+"</b></td></tr><tr><td height='"+td2height+"' align='center' class='td2style'><a href='javascript:Domsg(\"Yes\")' class='linkstyle'>Yes</a>&nbsp &nbsp<a href='javascript:Domsg(\"No\")' class='linkstyle1'>No</a></td></tr></table>"
+   if (document.layers) // Netscape 4.0+
+    {
+      document.formbox.document.write(theString)
+      document.formbox.document.close()
+      document.formbox.left=msgleft
+      document.formbox.top=msgtop+40
+      document.formbox.visibility="show"
+    }
+     else
+      {
+       if(document.getElementById) // Internet Explorer 5.0+ and Netscape 6.0+
+        {
+          elm=document.getElementById("formbox")
+          elm.innerHTML=theString
+          elm.style.top=msgtop
+          elm.style.left=msgleft
+          elm.style.visibility = "visible"
+        }
+      }
+ }
+
+function hidebox()
+ {
+  if (document.layers) // Netscape 4.0+
+   {
+     document.formbox.visibility="hidden"
+   }
+    if(document.getElementById) // Netscape 6.0+ and Internet Explorer 5.0+
+      {
+        elm.style.visibility="hidden"
+      }
+ }
+</script>
+        
+<script>
+document.getElementById("digit").onchange = function() {operacao()};
+var num1 ;
+var num2 ;
+var op1 ;
+var op2 ;
+var ptc = 0 ;
+var pte = 0 ;
+var result;
+var result1;
+var count = 1;
+var level = 10;
+      
+function random()
+ {
+  document.getElementById("digit").value = "";
+  document.getElementById("demo").innerHTML = "";
+  num1 = Math.floor(Math.random() * level );
+  num2 = Math.floor(Math.random() * level );   
+  (document.getElementById("op1").innerHTML = num1);
+  (document.getElementById("op2").innerHTML = num2);
+  document.getElementById("digit").focus();     
+ }
+function operacao()
+{
+ result = ( num1 * num2)
+ result1 = document.getElementById('digit').value;
+  if(result1 == result)
+   {	
+	 document.getElementById("demo").innerHTML = "Acertou!";
+	 count ++;
+	 ptc ++;
+     document.getElementById("ptc").innerHTML = ptc;
+	  if (count == 11)
+	   {
+          DoFormbox('Voc&ecirc; Ganhou!!!\n Pr&oacute;ximo N&iacute;vel?');
+          count = 1;
+       }
+   }else
+    { 
+      document.getElementById("demo").innerHTML = "Errou!";
+      pte ++;
+      document.getElementById("pte").innerHTML = pte;
+    }
+}		
+</script>
+ <div id="formbox" style="position:absolute;visibility:hidden;left:40%;top:26%; z-index: 2"></div>
+</body>
+</html>

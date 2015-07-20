@@ -1,0 +1,251 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+    
+}
+
+/* Portrait layout (default) */
+.app {
+    position: absolute;             /* position in the center of the screen */
+    left:50%;
+    top:30%;
+    height:50px;                   /* text area height */
+    width:150px;                   /* text area width */
+    text-align: center;
+    
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:115px 0px 0px 112px;  /* offset vertical: half of image height and text area height */
+                               /* offset horizontal: half of text area width */
+	
+	
+}
+
+.app1 {
+    position:absolute;             /* position in the center of the screen */
+    left:38%;
+    top:28%;
+    text-align:center;
+                                   /* offset horizontal: half of text area width */
+    
+}
+.app2 {
+    position:absolute;             /* position in the center of the screen */
+    left:49.1%;
+    top:52.2%;
+    text-align:center;
+                                   /* offset horizontal: half of text area width */
+    
+}
+.certo {
+    position:absolute;             /* position in the center of the screen */
+    left:38%;
+    top:48%;
+    text-align:center;
+                                   /* offset horizontal: half of text area width */
+    
+}
+
+.errado {
+    position:absolute;             /* position in the center of the screen */
+    left:43.6%;
+    top:48%;
+    text-align:center;
+                                   /* offset horizontal: half of text area width */
+    
+}
+
+.mix {
+    position:absolute;             /* position in the center of the screen */
+    left:38%;
+    top:55%;
+    text-align:center;
+                                   /* offset horizontal: half of text area width */
+    
+}
+.sinal {
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:20px;                   /* text area height */
+    width:20px;                   /* text area width */
+    text-align:center;
+    padding:117px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-168px 0px 0px -45px;  /* offset vertical: half of image height and text area height */
+                                 /* offset horizontal: half of text area width */
+}
+.parag{
+	
+	 text-align: right;
+	 font-weight: bold;
+	 font-size: 16px;
+     left:50%;
+     top:50%;
+     height:20px;                   /* text area height */
+     width:20px;                   /* text area width */
+     padding:22px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+     margin:-10px 0px 0px 65px;  /* offset vertical: half of image height and text area height */
+     
+ 
+}
+.parag2{
+	
+	 text-align: right;
+	 font-weight: bold;
+	 font-size: 16px;
+     left:50%;
+     top:50%;
+     height:20px;                   /* text area height */
+     width:20px;                   /* text area width */
+     padding:22px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+     margin:-10px 0px 0px 65px;  /* offset vertical: half of image height and text area height */
+     
+ 
+}
+	
+.certo1{
+	
+	 text-align: right;
+	 font-weight: bold;
+	 font-size: 26px;
+     left:50%;
+     top:48%;
+     height:20px;                   /* text area height */
+     width:20px;                   /* text area width */
+     padding:22px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+     margin:-17px 0px 0px 41px;  /* offset vertical: half of image height and text area height */
+     
+ 
+}
+.errado1{
+	
+	 text-align: right;
+	 font-weight: bold;
+	 font-size: 26px;
+     left:50%;
+     top:48%;
+     height:20px;                   /* text area height */
+     width:20px;                   /* text area width */
+     padding:22px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+     margin:-17px 0px 0px 42px;  /* offset vertical: half of image height and text area height */
+     
+ 
+}
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:15px 30px 95px 10px;  /* padding-top + padding-bottom + text area = image height */
+        margin: -30px 0px 0px -25px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+    
+}
+
+h3 {
+    font-size:16px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+    color: #1502fd;
+    font-style:bold;
+}
+
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+/* You can modify these styles to anything you want (or is allowed). */
+/* These are used by both browsers. You can set these to your preferences. */
+.td1style {font-weight:bold;border:1px solid black; text-align: center; background-color:#E4E4E4;color:#0d0000;font-size:16px;fontFamily:Verdana;}
+.td2style {font-weight:bold; border:1px solid black; background-image:url('../img/logo.png');background-repeat: no-repeat; background-position: center; background-color:lightwhite; font-size:30px;font-family:Verdana;}
+/* the style below is for the links that are inside the div when it pops up */
+.linkstyle {font-weight:bold;font-size:20px;text-decoration:none;color: blue;}
+.linkstyle1 {font-weight:bold;font-size:20px;text-decoration:none;color: red;}
