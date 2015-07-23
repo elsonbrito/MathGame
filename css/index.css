@@ -50,138 +50,224 @@ body {
 .app {
     position: absolute;             /* position in the center of the screen */
     left:50%;
-    top:30%;
-    height:50px;                   /* text area height */
-    width:150px;                   /* text area width */
+    top:50%;
+    height:150px;                   /* text area height */
+    width:150px;                  /* text area width */
     text-align: center;
-    
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:115px 0px 0px 112px;  /* offset vertical: half of image height and text area height */
-                               /* offset horizontal: half of text area width */
+/*    margin:0 auto;  /* offset vertical: half of image height and text area height */
+    margin-top:-110px;
+	margin-left:-75px;                            /* offset horizontal: half of text area width */
 	
 	
 }
 
 .app1 {
     position:absolute;             /* position in the center of the screen */
-    left:38%;
-    top:28%;
-    text-align:center;
-                                   /* offset horizontal: half of text area width */
+    left:50%;
+    top:30%;
+    height:150px;                   /* text area height */
+    width:150px;                  /* text area width */
+    text-align: center;
+    margin-top:-105px;
+	margin-left:-85px;                            /* offset horizontal: half of text area width */
+                               /* offset horizontal: half of image width and text area width */
+    
+}
+.app2 {
+    position:absolute;             /* position in the center of the screen */
+    left:39%;
+    top:72%;
+    text-align: center;
+                                   /* offset horizontal: half of text area width */    
+}
+.certo {
+    position:absolute;             /* position in the center of the screen */
+    left:26%;
+    top:46%;
+    text-align: center;                               /* offset horizontal: half of text area width */
+}
+.errado {
+    position: absolute;             /* position in the center of the screen */
+    left:46%;
+    top:46.5%;
+    text-align: center;
+                                   /* offset horizontal: half of text area width */   
+}
+.certo1{
+	position: absolute;
+	 text-align: right;
+	 font-weight: bold;
+	 font-size: 26px;
+     left:35%;
+     top:42%;
+     height:20px;                   /* text area height */
+     width:20px;                   /* text area width */
+}
+.errado1{
+	position: absolute;
+	 text-align: right;
+	 font-weight: bold;
+	 font-size: 26px;
+     left:55%;
+     top:42%;
+     height:20px;                   /* text area height */
+     width:20px;                   /* text area width */
+}
+
+.mix {
+    position: absolute;             /* position in the center of the screen */
+    left:42%;
+    top:65%;
+    text-align: center;                                   /* offset horizontal: half of text area width */    
+}
+.sinal {
+    position: absolute;             /* position in the center of the screen */
+    left:35%;
+    top:51%;
+    height:20px;                   /* text area height */
+    width:20px;                   /* text area width */
+    text-align: center;
+}
+.sinal1 {
+    position: absolute;             /* position in the center of the screen */
+    left:35%;
+    top:49%;
+    height:20px;                   /* text area height */
+    width:20px;                   /* text area width */
+    text-align: center;
+}
+.parag{
+	position: absolute;
+	 text-align: right;
+	 font-weight: bold;
+	 font-size: 18px;
+     left:41%;
+     top:50%;
+     height:20px;                   /* text area height */
+     width:20px;                   /* text area width */
+}
+.parag2{
+	position: absolute;
+	 text-align: right;
+	 font-weight: bold;
+	 font-size: 18px;
+     left:41%;
+     top:55%;
+     height:20px;                   /* text area height */
+     width:20px;                   /* text area width */   
+}
+	
+
+
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:350px) {
+    .app {
+        background-position: left center;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+ /*       margin:0 auto;  /* offset vertical: half of image height */
+        margin-top:-105px;
+	    margin-left:-75px;                            /* offset horizontal: half of text area width */
+                               /* offset horizontal: half of image width and text area width */
+    }
+
+.app1 {
+    background-position: left center;             /* position in the center of the screen */
+    top:50%;
+    left:30%;
+    text-align: center;                                   /* offset horizontal: half of text area width */
+    margin-top:-105px;
+	margin-left:-75px;                            /* offset horizontal: half of text area width */
+                               /* offset horizontal: half of image width and text area width */
     
 }
 .app2 {
     position:absolute;             /* position in the center of the screen */
     left:49.1%;
-    top:52.2%;
-    text-align:center;
+    top:68%;
+    text-align: center;
                                    /* offset horizontal: half of text area width */
-    
 }
 .certo {
     position:absolute;             /* position in the center of the screen */
-    left:38%;
-    top:48%;
-    text-align:center;
-                                   /* offset horizontal: half of text area width */
-    
+    left:44%;
+    top:20%;
+    text-align: center;                               /* offset horizontal: half of text area width */
 }
-
 .errado {
+    position: absolute;             /* position in the center of the screen */
+    left:56%;
+    top:20%;
+    text-align: center;
+                                   /* offset horizontal: half of text area width */   
+}
+.certo1{
     position:absolute;             /* position in the center of the screen */
-    left:43.6%;
-    top:48%;
-    text-align:center;
-                                   /* offset horizontal: half of text area width */
-    
+	 text-align: right;
+	 font-weight: bold;
+	 font-size: 26px;
+     left:48%;
+     top:15%;
+     height:20px;                   /* text area height */
+     width:20px;                   /* text area width */
+}
+.errado1{
+	 position:absolute;             /* position in the center of the screen */
+	 text-align: right;
+	 font-weight: bold;
+	 font-size: 26px;
+     left:60%;
+     top:15%;
+     height:20px;                   /* text area height */
+     width:20px;                   /* text area width */
 }
 
 .mix {
-    position:absolute;             /* position in the center of the screen */
-    left:38%;
+    position: absolute;             /* position in the center of the screen */
+    left:51%;
     top:55%;
-    text-align:center;
+    text-align: center;
                                    /* offset horizontal: half of text area width */
-    
 }
 .sinal {
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
+    position: absolute;             /* position in the center of the screen */
+    left:47%;
+    top:30%;
     height:20px;                   /* text area height */
     width:20px;                   /* text area width */
-    text-align:center;
-    padding:117px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-168px 0px 0px -45px;  /* offset vertical: half of image height and text area height */
-                                 /* offset horizontal: half of text area width */
+    text-align: center;
 }
-.parag{
-	
+.sinal1 {
+    position: absolute;             /* position in the center of the screen */
+    left:47%;
+    top:26%;
+    height:20px;                   /* text area height */
+    width:20px;                   /* text area width */
+    text-align: center;
+}
+.parag{	
+    position: absolute;             /* position in the center of the screen */
 	 text-align: right;
 	 font-weight: bold;
-	 font-size: 16px;
+	 font-size: 18px;
      left:50%;
-     top:50%;
+     top:30%;
      height:20px;                   /* text area height */
      width:20px;                   /* text area width */
-     padding:22px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-     margin:-10px 0px 0px 65px;  /* offset vertical: half of image height and text area height */
-     
- 
 }
 .parag2{
-	
+	 position: absolute;             /* position in the center of the screen */	
 	 text-align: right;
 	 font-weight: bold;
-	 font-size: 16px;
+	 font-size: 18px;
      left:50%;
-     top:50%;
+     top:38%;
      height:20px;                   /* text area height */
-     width:20px;                   /* text area width */
-     padding:22px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-     margin:-10px 0px 0px 65px;  /* offset vertical: half of image height and text area height */
-     
- 
-}
-	
-.certo1{
-	
-	 text-align: right;
-	 font-weight: bold;
-	 font-size: 26px;
-     left:50%;
-     top:48%;
-     height:20px;                   /* text area height */
-     width:20px;                   /* text area width */
-     padding:22px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-     margin:-17px 0px 0px 41px;  /* offset vertical: half of image height and text area height */
-     
- 
-}
-.errado1{
-	
-	 text-align: right;
-	 font-weight: bold;
-	 font-size: 26px;
-     left:50%;
-     top:48%;
-     height:20px;                   /* text area height */
-     width:20px;                   /* text area width */
-     padding:22px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-     margin:-17px 0px 0px 42px;  /* offset vertical: half of image height and text area height */
-     
- 
+     width:20px;                   /* text area width */      
 }
 
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:15px 30px 95px 10px;  /* padding-top + padding-bottom + text area = image height */
-        margin: -30px 0px 0px -25px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
 }
 
 h1 {

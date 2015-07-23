@@ -29,41 +29,33 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Math Game</title>
     </head>
-    <body>
-    
-    <div class="app1">
-    
-    <img name="soma" src="img/mult.png" alt="" usemap="#opermap" style="width:145px;height:126px;">
-
+<body>    
+<div class="app1">
+<h1 class="blink">Math Game</h1>
+<img name="soma" src="img/mult.png" alt="" usemap="#opermap" style="width:145px;height:126px;">
 <map name="opermap">
   <area shape="rect" coords="0,0,66,55" alt="Somar" href="som.html" onmouseover="ShowPicsoma('img/som.png')" onmouseout="ShowPicsoma('img/mult.png')" >
   <area shape="rect" coords="77,0,145,55" alt="Diminuir" href="dimin.html" onmouseover="ShowPicsoma('img/dim.png')" onmouseout="ShowPicsoma('img/mult.png')">
   <area shape="rect" coords="0,62,67,116" alt="Multiplicar" href="mult.html" onmouseover="ShowPicsoma('img/mult.png')" onmouseout="ShowPicsoma('img/mult.png')">
   <area shape="rect" coords="142,62,75,116" alt="Dividir" href="div.html" onmouseover="ShowPicsoma('img/div.png')" onmouseout="ShowPicsoma('img/mult.png')">
 </map>
+<a href="mix.html"><img src="img/mixs.png" alt="Mix" onmouseover="this.src='img/mix1.png'" onmouseout="this.src='img/mixs.png'" style="width:145px;height:46px;"></a>
 </div>      
+
 <div class="certo">
  <img name="mix" src="img/certo.gif" alt="Mix"  style="width:35px;height:36px;">
 </div>
-<div id="deviceready" class="certo">
+<div id="deviceready" class="certo1">
  <p class="certo1" id="ptc">00</p>
 </div>
 <div class="errado">    
   <img name="mix" src="img/errado.gif" alt="Mix"  style="width:35px;height:36px;">
 </div>   
-<div id="deviceready" class="errado">
+<div id="deviceready" class="errado1">
   <p class="errado1" id="pte">00</p>
 </div>  
-  <div class="mix">
-   <a href="mix.html"><img name="mix" src="img/mixs.png" alt="Mix" onmouseover="this.src='img/mix1.png'" onmouseout="this.src='img/mixs.png'" style="width:145px;height:46px;"></a>
-  </div>
-
-
-
-        <div class="app">
-            <h1>Math Game</h1>
             
-            <div id="deviceready" class="">
+            <div id="deviceready" class="parag">
              <p class="parag" id="op1">000</p>
             </div>
             
@@ -71,26 +63,21 @@
              <p style="font-style: bold; font-size: 30px"> &times; </p>
             </div>
             
-            <div id="deviceready" class="">
+            <div id="deviceready" class="parag2">
              <p class="parag2" id="op2">000</p>
             </div>
             
-            <div id="deviceready" class="">
-             <input id="digit" size="1" style="text-align:right" value="" type="text"/>
+            <div id="deviceready" class="mix">
+             <input id="digit" size="2" style="text-align:right" value="" type="text"/>
             </div>
             
-            
-            <br />
+            <div class="app2">
             <input type="submit" value="Novo" onclick="random()"/>
-            
            <br />
-           <br />
-           
-            
-            <div id="deviceready" class="blink">
-             <h3 id="demo"></h3>
+           <br />                       
+             <h3 class="blink" id="demo"></h3>
             </div>           
-</div>
+
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
@@ -176,7 +163,7 @@ var pte = 0 ;
 var result;
 var result1;
 var count = 1;
-var level = 10;
+var level = 5;
       
 function random()
  {
